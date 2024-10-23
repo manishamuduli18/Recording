@@ -1,0 +1,39 @@
+.home{
+    background-color: #104E8B;
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+    height: 100vh;          
+  }
+  
+  .babble-button {
+    background-color: #104E8B;   /* Button background matches inside color */
+    color: #ffb684;
+    height: 80px;                /* Height of the button */
+    width: 80px;                 /* Width of the button */
+    font-size: 16px;
+    border-radius: 50%;          /* Makes the button a circle */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;     /* Center the text horizontally */
+    align-items: center;         /* Center the text vertically */
+    transition: background-color 0.3s ease;
+  }
+  
+  .babble-button:hover {
+    background-color:transparent;
+  }
+
+  .circle-container {
+    display: flex;
+    justify-content: center;     /* Center the content horizontally */
+    align-items: center;         /* Center the content vertically */
+    width: 150px;                /* Width of the outer circle */
+    height: 150px;               
+    background-color:#104E8B;   
+    border-radius: 50%;     
+    border:20px #ffb684;   
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.5); /* Orange glow effect */
+    position: relative; 
+  }
