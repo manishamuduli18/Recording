@@ -3,49 +3,45 @@ body {
   display:flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
+  height: 100vh;
 }
 
 .waveform-container {
   position: relative;
-  width: 300px;
-  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 1920px;
+  height: 990px;
 }
 
-.waveform {
+.wave {
   position: absolute;
-  bottom: 0;
-  top: 20%;
-  width: 800%;
-  height: 400%; 
-  background: linear-gradient(45deg, #ffb56a, #ff6384);
-  z-index: -1; 
-  animation: animateWave 2s infinite ease-in-out;
+  z-index: -1;
+  width: 1920px;
+  height: 100px;
+  bottom: 48%;
 }
 
-@keyframes animateWave {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+.wave2 {
+  background-color: orange;
+  width: 1920px;
+  height: 425.05px;
+  bottom: 0%;
+  position: absolute;
 }
 
 .recording-container {
   width: 150px;
   height: 150px;
+  left: 46%;
+  bottom: 42%;
   background-color: white;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 1; 
+  position: absolute; 
+  z-index: 1;
 }
 
 .stop-button {
