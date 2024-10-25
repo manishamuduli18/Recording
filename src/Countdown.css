@@ -1,8 +1,8 @@
 .countdown-container {
     display: flex;
-    justify-content: center;     /* Center the content horizontally */
-    align-items: center;         /* Center the content vertically */
-    width: 150px;                /* Width of the outer circle */
+    justify-content: center;
+    align-items: center;
+    width: 150px;
     height: 150px;               
     background-color:white;   
     border-radius: 50%;     

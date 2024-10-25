@@ -1,0 +1,41 @@
+/* Ensure the entire screen has a background color */
+body {
+  background-color: #104E8B; /* Dark blue background */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container to center the buttons horizontally */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Space between the buttons */
+}
+
+/* Common style for both buttons */
+.button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Styling for the 'Done' button */
+.done-button {
+  background-color: white;
+  color: black;
+}
+
+/* Styling for the 'Resume' button */
+.resume-button {
+  background-color: #ffb347; /* Light orange color */
+  color: white;
+}

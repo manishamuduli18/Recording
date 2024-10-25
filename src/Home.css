@@ -7,33 +7,62 @@
   }
   
   .babble-button {
-    background-color: #104E8B;   /* Button background matches inside color */
+    background-color: #104E8B;
     color: #ffb684;
-    height: 80px;                /* Height of the button */
-    width: 80px;                 /* Width of the button */
+    height: 80px;
+    width: 80px;
     font-size: 16px;
-    border-radius: 50%;          /* Makes the button a circle */
+    border-radius: 50%;     
     border: none;
     cursor: pointer;
     display: flex;
-    justify-content: center;     /* Center the text horizontally */
-    align-items: center;         /* Center the text vertically */
+    justify-content: center;    
+    align-items: center;        
+    position:relative;
     transition: background-color 0.3s ease;
   }
   
-  .babble-button:hover {
-    background-color:transparent;
-  }
-
+  
   .circle-container {
     display: flex;
-    justify-content: center;     /* Center the content horizontally */
-    align-items: center;         /* Center the content vertically */
-    width: 150px;                /* Width of the outer circle */
+    justify-content: center;
+    align-items: center;
+    width: 150px;
     height: 150px;               
     background-color:#104E8B;   
     border-radius: 50%;     
-    border:20px #ffb684;   
-    box-shadow: 0 0 30px rgba(255, 165, 0, 0.5); /* Orange glow effect */
-    position: relative; 
+    border:0 0 30px #ffb684;   
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.5);
+    position: absolute; 
   }
+
+  .mid-ring, .inner-ring {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgba(255, 165, 0, 0.5);
+  }
+
+  .outer-ring {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    border: 2px solid rgba(255, 165, 0, 0.5);
+  }
+
+  .circle-container:hover .mid-ring {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  
+  .circle-container:hover .inner-ring {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+

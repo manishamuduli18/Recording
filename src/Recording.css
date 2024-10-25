@@ -1,68 +1,62 @@
-body{
-    background-color: #104E8B;
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    height: 100vh;   
+body {
+  background-color: #104E8B;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.waveform-container {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waveform {
+  position: absolute;
+  bottom: 0;
+  top: 20%;
+  width: 800%;
+  height: 400%; 
+  background: linear-gradient(45deg, #ffb56a, #ff6384);
+  z-index: -1; 
+  animation: animateWave 2s infinite ease-in-out;
+}
+
+@keyframes animateWave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.recording-container {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1; 
 }
 
 .stop-button {
-    background-color: white;   /* Button background matches inside color */
-    color: black;
-    height: 80px;                /* Height of the button */
-    width: 80px;                 /* Width of the button */
-    font-size: 16px;
-    border-radius: 50%;          /* Makes the button a circle */
-    border: none;
-    display: flex;
-    justify-content: center;     /* Center the text horizontally */
-    align-items: center; 
-  }
-
-  .recording-container {
-    display: flex;
-    justify-content: center;     /* Center the content horizontally */
-    align-items: center;         /* Center the content vertically */
-    width: 150px;                /* Width of the outer circle */
-    height: 150px;               
-    background-color:white;   
-    border-radius: 50%;     
-    position: relative; 
-  }
-
-  .waveform-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #1e90ff, #00ffcc);
-    z-index: -1; /* Behind all other elements */
-    opacity: 0;  /* Initially hidden */
-    animation: fadeIn 1s forwards; /* Fade in effect when waveform starts */
-  }
-  
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .waveform {
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    bottom: 10%;
-    background: linear-gradient(45deg, #ffb56a, #ff6384);
-    animation: animateWave 2s infinite ease-in-out;
-  }
-
-  @keyframes animateWave {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-  }
-  
+  background-color: white;
+  color: black;
+  height: 80px;
+  width: 80px;
+  font-size: 16px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

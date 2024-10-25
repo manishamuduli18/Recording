@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './Recordresume.css';
 
-export const Recordresume = () => {
+const Recordresume = () => {
   return (
-    <div>Recordresume</div>
-  )
-}
+    <div className="button-container">
+      <div className="button done-button">Done</div>
+      <div className="button resume-button">Resume</div>
+    </div>
+  );
+};
+
+export default Recordresume;
