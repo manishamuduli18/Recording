@@ -1,37 +1,58 @@
-import React, { useState } from 'react';
-import './Recording.css';
-import Wave from 'react-wavify';
+body {
+  background-color: #104E8B;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+}
 
-const Recording = ({ stopRecording }) => {
-  const [isRecording, setIsRecording] = useState(true);
+.waveform-container {
+  position: relative;
+  display: flex;
+  width: 1920px;
+  height: 990px;
+}
 
-  const handleStop = () => {
-    setIsRecording(false);
-    stopRecording();
-  };
+.wave {
+  position: absolute;
+  z-index: -1;
+  width: 1920px;
+  height: 100px;
+  bottom: 48%;
+}
 
-  return (
-    
-    <div className="waveform-container">
-      <div className="recording-container">
-        <button onClick={handleStop} className="stop-button">Stop</button>    
-      </div>
-      <div className='wave'>
-      <Wave
-          fill='orange'
-          paused={false}
-          options={{
-            height: 100,
-            amplitude: 35,
-            speed: 0.20,
-            points: 8
-          }}
-          />
-          </div>
-          <div className='wave2'>
-          </div>
-    </div>
-  );
-};
+.wave2 {
+  background-color: orange;
+  width: 1920px;
+  height: 425.05px;
+  bottom: 0%;
+  position: absolute;
+}
 
-export default Recording;
+.recording-container {
+  width: 150px;
+  height: 150px;
+  left: 46%;
+  bottom: 42%;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  z-index: 1;
+}
+
+.stop-button {
+  background-color: white;
+  color: black;
+  height: 80px;
+  width: 80px;
+  font-size: 16px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
