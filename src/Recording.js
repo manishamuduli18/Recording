@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Recording.css';
-import Recordresume from './Recordresume';
+import Wave from 'react-wavify';
 
 const Recording = ({ stopRecording }) => {
   const [isRecording, setIsRecording] = useState(true);
@@ -8,15 +8,28 @@ const Recording = ({ stopRecording }) => {
   const handleStop = () => {
     setIsRecording(false);
     stopRecording();
-    Recordresume();
   };
 
   return (
+    
     <div className="waveform-container">
-      <div className="waveform"></div>
       <div className="recording-container">
-        <button onClick={handleStop} className="stop-button">Stop</button>
+        <button onClick={handleStop} className="stop-button">Stop</button>    
       </div>
+      <div className='wave'>
+      <Wave
+          fill='orange'
+          paused={false}
+          options={{
+            height: 100,
+            amplitude: 35,
+            speed: 0.20,
+            points: 8
+          }}
+          />
+          </div>
+          <div className='wave2'>
+          </div>
     </div>
   );
 };
